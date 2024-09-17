@@ -1,11 +1,10 @@
-import 'package:equatable/equatable.dart';
 
 import 'image_links.dart';
 import 'industry_identifier.dart';
 import 'panelization_summary.dart';
 import 'reading_modes.dart';
 
-class VolumeInfo extends Equatable {
+class VolumeInfo   {
   final String? title;
   final String? subtitle;
   final List<String>? authors;
