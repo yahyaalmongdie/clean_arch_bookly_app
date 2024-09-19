@@ -6,7 +6,6 @@ class FetchFeaturedBooksState extends Equatable {
   @override
   List<Object> get props => [];
 }
-
 class FetchFeaturedBooksInitial extends FetchFeaturedBooksState {}
 
 class FetchFeaturedBooksLoading extends FetchFeaturedBooksState {}
