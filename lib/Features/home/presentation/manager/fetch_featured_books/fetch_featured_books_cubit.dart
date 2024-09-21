@@ -9,9 +9,9 @@ class FetchFeaturedBooksCubit extends Cubit<FetchFeaturedBooksState> {
   FetchFeaturedBooksCubit(this.featuredBooksUseCase)
       : super(FetchFeaturedBooksInitial());
   final FetchFeaturedBooksUseCase featuredBooksUseCase;
-  Future<void> fetchFeaturedBooks() async {
+  Future<void> fetchFeaturedBooks({int pageNumber = 0}) async {
     emit(FetchFeaturedBooksLoading());
-    var result = await featuredBooksUseCase.call();
+    var result = await featuredBooksUseCase.call(pageNumber);
     result.fold((failure) {
       emit(FetchFeaturedBooksFailure(errorMessage: failure.errorMessage));
     }, (success) {

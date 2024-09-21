@@ -1,8 +1,7 @@
-
 import 'epub.dart';
 import 'pdf.dart';
 
-class AccessInfo  {
+class AccessInfo {
   final String? country;
   final String? viewability;
   final bool? embeddable;
