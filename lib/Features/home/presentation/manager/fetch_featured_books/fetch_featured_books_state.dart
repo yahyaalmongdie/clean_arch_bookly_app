@@ -10,6 +10,7 @@ class FetchFeaturedBooksState extends Equatable {
 class FetchFeaturedBooksInitial extends FetchFeaturedBooksState {}
 
 class FetchFeaturedBooksLoading extends FetchFeaturedBooksState {}
+class FetchFeaturedBooksPaginationLoading extends FetchFeaturedBooksState {}
 
 class FetchFeaturedBooksFailure extends FetchFeaturedBooksState {
   final String errorMessage;
