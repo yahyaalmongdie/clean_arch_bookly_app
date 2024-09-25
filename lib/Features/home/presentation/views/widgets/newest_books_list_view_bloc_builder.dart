@@ -15,14 +15,12 @@ class NewestBooksListViewBlocBuilder extends StatelessWidget {
     return BlocBuilder<FetchNewestBooksCubit, FetchNewestBooksState>(
       builder: (context, state) {
         if (state is FetchNewestBooksSuccess) {
-
-           return BestSellerListView(books:state.data);
+          return BestSellerListView(books: state.data);
         } else if (state is FetchNewestBooksFailure) {
           return CustomErrorWidget(state.errorMessage);
         } else {
-          return CustomCircularProgressIndicator();
+          return const CustomCircularProgressIndicator();
         }
-       
       },
     );
   }

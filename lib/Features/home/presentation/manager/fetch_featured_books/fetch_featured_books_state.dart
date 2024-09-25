@@ -10,15 +10,23 @@ class FetchFeaturedBooksState extends Equatable {
 class FetchFeaturedBooksInitial extends FetchFeaturedBooksState {}
 
 class FetchFeaturedBooksLoading extends FetchFeaturedBooksState {}
+
 class FetchFeaturedBooksPaginationLoading extends FetchFeaturedBooksState {}
+
+class FetchFeaturedBooksPaginationFailure extends FetchFeaturedBooksState {
+  final String errorMessage;
+
+  const FetchFeaturedBooksPaginationFailure({required this.errorMessage});
+}
 
 class FetchFeaturedBooksFailure extends FetchFeaturedBooksState {
   final String errorMessage;
 
   const FetchFeaturedBooksFailure({required this.errorMessage});
 }
+
 class FetchFeaturedBooksSuccess extends FetchFeaturedBooksState {
-  final List<BookEntity>data;
+  final List<BookEntity> data;
 
   const FetchFeaturedBooksSuccess({required this.data});
 }
