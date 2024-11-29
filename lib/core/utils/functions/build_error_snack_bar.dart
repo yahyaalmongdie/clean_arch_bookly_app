@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 SnackBar buildErrorSnackBar({required String errorMessage}) {
   return SnackBar(
     backgroundColor: Colors.red,
